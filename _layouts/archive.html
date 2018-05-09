@@ -1,18 +1,20 @@
 ---
 layout: default
-published: true
 ---
-<!-- Place for an intro paragraph on the homepage -->
-<h1>Welcome</h1>
-<div class="entry">
-    Add some interesting information here.
-</div>
-<!-- End Intro -->
 
-<h1>Latest Posts</h1>
+<article class="page">
+
+  <h1>{{ page.title }}</h1>
+
+  <div class="entry">
+    {{ content }}
+  </div>
+  
+</article>
+
 <!-- Begin posts -->
 <div class="posts">
-  {% for post in site.posts limit:5 %}
+  {% for post in site.posts %}
     <article class="post">
 
       <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
